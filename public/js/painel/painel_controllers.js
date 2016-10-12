@@ -46,6 +46,13 @@ angular.module('app')
 		});
 	};
 
+	this.Alternar = function(id){
+		Sensor.update({id: id}, function(){
+
+		});
+	};
+	
+
 	load();
 }])
 .controller('UserController', ['User', function(User) {
