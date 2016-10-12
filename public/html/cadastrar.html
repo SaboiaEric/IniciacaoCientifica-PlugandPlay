@@ -1,16 +1,38 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" ui-sref="home">Plug and Play</a>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#/landing">Home</a>
+        </li>
+        <li>
+          <a href="http://www.facens.br">FACENS</a>
+        </li> 
+        <li>
+          <a href="https://github.com/SaboiaEric/IniciacaoCientifica-PlugandPlay">GitHub</a>
+        </li>
+        <li>
+          <a href="#/sobrenos">Sobre Nós</a>
+        </li> 
+      </ul>
+      
     </div>
+    <div id="navbar" class="navbar-collapse collapse" ng-controller="LoginController as loginCtrl">
+      <form class="navbar-form navbar-right" ng-submit="loginCtrl.login(email, senha)">
+        <div class="form-group">
+          <input type="text" placeholder="Email" ng-model="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Senha" ng-model="senha" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">
+          <span class="glyphicon glyphicon-log-in"></span>  Entrar
+        </button>
+      </form>
+    </div><!--/.navbar-collapse -->
   </div>
 </nav>
+
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-2 column">
