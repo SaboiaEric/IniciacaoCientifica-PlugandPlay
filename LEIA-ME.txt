@@ -3,3 +3,4 @@ npm install mongodb --save
 npm install -g nodemon
 npm install bootstrap
 npm install angularjs
+npm install johnny-five

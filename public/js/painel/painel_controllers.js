@@ -46,13 +46,16 @@ angular.module('app')
 		});
 	};
 
-	this.Alternar = function(id){
-		Sensor.update({id: id}, function(){
-
-		});
-	};
 	
-
+	this.alternarSensor = function(id){
+		//coletar id sensor
+		Sensor.update({id: id}, function(){
+			load();
+		});
+		//realizar toggle do pino que ele aciona e
+		//do background da tabela dele
+		//enviar para o banco de dados uma atualização		
+	};
 	load();
 }])
 .controller('UserController', ['User', function(User) {

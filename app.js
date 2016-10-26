@@ -22,7 +22,8 @@ winston.add(winston.transports.File, { filename: 'DispositivoPlugAndPlay.log' })
 
 mongoose.connect(config.database, function(err){
   if(err) winston.error(err);
-  else winston.info("sucesso");
+  else winston.info("Projeto Web funcionando! Vamos usar?");
+  winston.info("Arduino conectado com sucesso. Hora de trabalhar!");
 });
 
 var routes = require('./routes/index');
